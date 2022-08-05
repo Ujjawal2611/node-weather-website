@@ -2,7 +2,7 @@
 
 function myFunction(){
     var name=document.getElementById("loc").value
-    fetch('http://localhost:3000/weather?address='+name).then((response)=>{
+    fetch('/weather?address='+name).then((response)=>{
     response.json().then((data)=>{
         if(data.error){
                 document.getElementById("result").innerHTML='error : '+ data.error
